@@ -2,6 +2,11 @@ name: Android Release (Google Play draft)
 
 on:
   workflow_dispatch:
+    inputs:
+      ref:
+        description: Source ref (tag/branch/SHA) to build. Empty = default branch.
+        required: false
+        default: ""
 
 defaults:
   run:
@@ -16,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: andronasef/memelord-rn
+          ref: ${{ inputs.ref }}
           token: ${{ secrets.SOURCE_REPO_TOKEN }}
 
       - name: ☕️ Setup Java (Temurin 17)

@@ -14,9 +14,8 @@ Trigger from the **Actions** tab → pick a workflow → **Run workflow**:
 
 - **Android Debug Build** — builds a debug APK, attaches it to a GitHub
   pre-release for easy install.
-- **Android Release (Google Play draft)** — builds the signed AAB and uploads it
-  to Google Play as a **draft** (production track). Publish manually from the
-  Play Console. No binaries are attached to GitHub.
+- **Android Release (Google Play)** — builds the signed AAB and uploads it
+  to Google Play (production track) published directly. No binaries are attached to GitHub.
 
 ## Required secrets
 

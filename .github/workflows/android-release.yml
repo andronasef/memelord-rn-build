@@ -1,4 +1,4 @@
-name: Android Release (Google Play draft)
+name: Android Release (Google Play)
 
 on:
   workflow_dispatch:
@@ -65,11 +65,11 @@ jobs:
       - name: 🔑 Write Google Play service account key
         run: echo '${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}' > play-service-account.json
 
-      - name: 🚀 Upload to Google Play (draft)
+      - name: 🚀 Upload to Google Play
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJson: app/play-service-account.json
           packageName: com.increase.mememaker
           releaseFiles: app/android/app/build/outputs/bundle/release/app-release.aab
           track: production
-          status: draft
+          status: completed
